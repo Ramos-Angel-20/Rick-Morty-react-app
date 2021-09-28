@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-color: white;
+}
+
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+main {
+    width: 100vw;
+    height: auto;
+    background-color: $lighttheme-background;
+}
+
+main.dark-mode {
+    background-color: $darktheme-background;
+    color: $darktheme-font-color;
+    $font-color: #fff;
+}

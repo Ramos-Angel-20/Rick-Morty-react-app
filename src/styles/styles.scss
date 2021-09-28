@@ -1,0 +1,9 @@
+@import './base/settings';
+@import './base/base';
+
+// Componentes
+@import './components/index-page';
+@import './components//characters-list';
+@import './components/character-item';
+@import './components/character-page';
+@import './components/character-detail';

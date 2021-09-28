@@ -1,0 +1,123 @@
+.character-item {
+    background-color: white;
+    height: 200px;
+    box-shadow: $default-box-shadow;
+    border-radius: 18px;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    animation: card-item__appear 200ms ease-in forwards;
+}
+
+.dark-mode {
+    background-color: #323232;
+    color: white;
+}
+
+.character-item__image {
+    min-height: 100%;
+    min-width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.character-item__info {
+    font-family: $title-font;
+    // background-color: red;
+    width: 500px;
+    height: 180px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.character-item__info-name {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.character-item__info-specie {
+    justify-self: center;
+    align-self: center;
+}
+.character-item__info-gender {
+    justify-self: center;
+    align-self: center;
+}
+
+.character-item__info-status {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 2;
+    justify-self: center;
+}
+
+.character-item__info-status-ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 0px 10px;
+}
+
+.character-item__info-status .Alive {
+    background-color: green;
+}
+
+.character-item__info-status .Dead {
+    background-color: red;
+}
+
+.character-item__info-status .unknown {
+    background-color: grey;
+}
+
+.character-item__info-button {
+    background-color: #25c438;
+    height: 50px;
+    border-radius: 10px;
+    align-self: center;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+.character-item__info-button:hover {
+    cursor: pointer;
+    background-color: darken($color: #25c438, $amount: 6);
+}
+
+@keyframes card-item__appear {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .character-item {
+        height: 150px;
+        width: 100%;
+    }
+
+    .character-item__image {
+        min-width: 150px;
+    }
+
+    .character-item__info {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 674px) {
+    .character-item {
+        height: 200px;
+        width: 90%;
+    }
+}

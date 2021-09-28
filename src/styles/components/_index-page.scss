@@ -1,0 +1,67 @@
+.index-page {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.index-page__backgroundImage {
+    z-index: 0;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    top: -12px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(2px);
+    }
+
+    & h1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40%;
+        text-align: center;
+        font-family: $title-font;
+        color: white;
+        font-size: 90px;
+        text-shadow: 1px 1px 9px rgba(0,0,0,0.9);
+        user-select: none;
+    }
+
+}
+
+.index-page__character-container {
+    min-height: 500px;
+    position: relative;
+    width: 90%;
+    margin: 0px auto;
+    top: -4em; //pasar a negativo
+}
+
+@media screen and (max-width: 750px) {
+    .index-page__backgroundImage {
+        & h1 {
+            font-size: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .index-page__backgroundImage {
+        & h1 {
+            font-size: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .index-page__backgroundImage {
+        & h1 {
+            font-size: 50px;
+        }
+    }
+}
+

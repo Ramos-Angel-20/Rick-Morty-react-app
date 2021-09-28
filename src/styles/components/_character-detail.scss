@@ -1,0 +1,40 @@
+.character-detail {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.character-detail__image {
+    grid-column: 1 / 2;
+}
+.character-detail__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.character-detail__info {
+    font-family: $title-font;
+    display: flex;
+    background-color: rosybrown;
+    flex-direction: column;
+}
+.character-detail__info-name {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+.character-detail__info-episodes {
+    
+}
+
+.character-detail__info-episodes ol {
+    height: 200px;
+    overflow-y: scroll;
+    width: 50%;
+}
+.character-detail__info-origin {
+
+}
+.character-detail__info-lastseen {
+    
+}
